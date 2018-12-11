@@ -21,22 +21,22 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="XdB-eQ-8aX">
+                                    <barButtonItem title="Pick" id="XdB-eQ-8aX">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="mdB-NW-beH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="trailing" secondItem="epy-Oo-JM6" secondAttribute="trailing" id="0v6-rU-H9n"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Jk-La-OcY"/>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="bottom" secondItem="epy-Oo-JM6" secondAttribute="top" id="cT0-Fc-W1B"/>
+                            <constraint firstItem="3qc-T9-2cf" firstAttribute="bottom" secondItem="epy-Oo-JM6" secondAttribute="top" constant="-3" id="cT0-Fc-W1B"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfz-Tr-F1I"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="leading" secondItem="epy-Oo-JM6" secondAttribute="leading" id="fkn-5S-IB9"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mmu-Mj-9HW"/>
