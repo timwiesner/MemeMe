@@ -23,7 +23,12 @@
                                 <items>
                                     <barButtonItem title="Pick" id="XdB-eQ-8aX">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="mdB-NW-beH"/>
+                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="j2d-HW-hcL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="QNW-UP-eJr">
+                                        <connections>
+                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="8e7-Lq-scH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -45,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="QNW-UP-eJr" id="VDM-gx-B5h"/>
                         <outlet property="imagePickerView" destination="3qc-T9-2cf" id="eSi-dP-Awr"/>
                     </connections>
                 </viewController>
