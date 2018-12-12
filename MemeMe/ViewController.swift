@@ -29,10 +29,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
         topTextField.text = "TOP"
+        topTextField.textAlignment = .center
+        bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.text = "BOTTOM"
-//        cameraButton = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
+        bottomTextField.textAlignment = .center
     }
     
     override func viewWillAppear(_ animated: Bool) {
