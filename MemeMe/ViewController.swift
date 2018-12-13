@@ -26,14 +26,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSAttributedString.Key.strokeWidth:  -3.5
     ]
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .center
         bottomTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
+        topTextField.textAlignment = .center
         bottomTextField.textAlignment = .center
+        self.topTextField.delegate = self
+        self.bottomTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         dismiss(animated: true, completion: nil)
     }
+    
     
 }
 
