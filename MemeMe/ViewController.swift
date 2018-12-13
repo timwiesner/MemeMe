@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var topBar: UIToolbar!
+    @IBOutlet weak var bottomBar: UIToolbar!
     
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
@@ -111,10 +113,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func share(_ sender: Any) {
         save()
+        let memedImage = generateMemedImage()
+        let vc = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        vc.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            if !completed {
+                return
+            }
+        }
+        present(vc, animated: true)
     }
-    
-    
-    
     
     func save() {
 //        Create the meme
@@ -122,17 +129,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func generateMemedImage() -> UIImage {
-        //        TODO: Hide toolbar and navbar
+        // Hide toolbar and navbar
+        topBar.isHidden = true
+        bottomBar.isHidden = true
         
         
-        //        Render view to an image
+        // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        //        TODO: Show toolbar and navbar
         
+        // Show toolbar and navbar
+        topBar.isHidden = false
+        bottomBar.isHidden = false
         
         
         return memedImage

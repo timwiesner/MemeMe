@@ -97,9 +97,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomBar" destination="epy-Oo-JM6" id="Z1C-1m-c03"/>
                         <outlet property="bottomTextField" destination="wDj-rZ-yqX" id="uC0-Rl-LLj"/>
                         <outlet property="cameraButton" destination="QNW-UP-eJr" id="VDM-gx-B5h"/>
                         <outlet property="imagePickerView" destination="3qc-T9-2cf" id="eSi-dP-Awr"/>
+                        <outlet property="topBar" destination="Jz0-zc-MKK" id="VGU-Nt-dGt"/>
                         <outlet property="topTextField" destination="eZr-Ee-hBk" id="a66-MW-mIi"/>
                     </connections>
                 </viewController>
