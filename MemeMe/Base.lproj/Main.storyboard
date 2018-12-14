@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
+                                <rect key="frame" x="0.0" y="94" width="414" height="718"/>
+                                <color key="backgroundColor" red="0.11648448447463987" green="0.13961357031971969" blue="0.23571081606217614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-zc-MKK" userLabel="Top Toolbar">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BB2-ws-Tng"/>
                                 </constraints>
@@ -38,7 +42,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6" userLabel="Bottom Toolbar">
-                                <rect key="frame" x="0.0" y="270" width="568" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xtu-3L-dnm"/>
                                 </constraints>
@@ -57,18 +61,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ffG-mR-z4i"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
-                                <rect key="frame" x="0.0" y="50" width="568" height="220"/>
-                                <color key="backgroundColor" red="0.11648448447463987" green="0.13961357031971969" blue="0.23571081606217614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
-                                <rect key="frame" x="5" y="80" width="568" height="17"/>
+                                <rect key="frame" x="5" y="124" width="414" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-rZ-yqX" userLabel="Bottom Text Field">
-                                <rect key="frame" x="5" y="223" width="568" height="17"/>
+                                <rect key="frame" x="5" y="765" width="414" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
