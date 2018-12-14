@@ -86,24 +86,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func pickImageFromAlbum(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-        
-        shareButton.isEnabled = true
+        configureImage(type: .photoLibrary)
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
+        configureImage(type: .camera)
+    }
+    
+    func configureImage(type: UIImagePickerController.SourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = type
         present(imagePicker, animated: true, completion: nil)
         shareButton.isEnabled = true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
         }
@@ -115,6 +113,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePickerView.image = nil
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
+        shareButton.isEnabled = false
     }
     
     @IBAction func share(_ sender: Any) {
