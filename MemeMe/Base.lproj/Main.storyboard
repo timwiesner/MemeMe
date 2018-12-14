@@ -62,13 +62,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
-                                <rect key="frame" x="5" y="124" width="414" height="17"/>
+                                <rect key="frame" x="20" y="109" width="374" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-rZ-yqX" userLabel="Bottom Text Field">
-                                <rect key="frame" x="5" y="765" width="414" height="17"/>
+                                <rect key="frame" x="20" y="780" width="374" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -76,30 +76,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="trailing" secondItem="epy-Oo-JM6" secondAttribute="trailing" id="0v6-rU-H9n"/>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" id="6Jk-La-OcY"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7fU-lR-QDd"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DBT-91-kDU"/>
-                            <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Ghq-La-UGX"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MCB-2r-eJR"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" placeholder="YES" id="Pxn-bB-86w"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Qns-sP-xkd"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="30" id="S5F-ws-8QA"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SSu-UW-KRJ"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UKF-EA-Jhg"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WaQ-0i-WoO"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a1r-yO-kCs"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="aSB-J3-Lhx"/>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="bottom" secondItem="epy-Oo-JM6" secondAttribute="top" id="cT0-Fc-W1B"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfz-Tr-F1I"/>
-                            <constraint firstItem="wDj-rZ-yqX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="duF-J8-aOR"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="3qc-T9-2cf" secondAttribute="trailing" id="eq3-d2-Dun"/>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="leading" secondItem="epy-Oo-JM6" secondAttribute="leading" id="fkn-5S-IB9"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lXi-z1-cZU"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mmu-Mj-9HW"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="3qc-T9-2cf" secondAttribute="leading" id="rbx-O8-huW"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tjm-Rp-nhP"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="30" id="xi8-xa-Df4"/>
+                            <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="eZr-Ee-hBk" secondAttribute="leading" id="7O8-uQ-xX2"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bpf-2C-Enn"/>
+                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eje-ce-Pyr"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3k-Pk-fvp"/>
+                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="15" id="Mrx-jY-E3O"/>
+                            <constraint firstItem="3qc-T9-2cf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OuM-P1-6s9"/>
+                            <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" id="TKj-yG-prR"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TvT-O0-soJ"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YIH-Ow-ZdW"/>
+                            <constraint firstItem="3qc-T9-2cf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eTM-aL-Mal"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k6b-Ua-HIj"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="3qc-T9-2cf" secondAttribute="bottom" id="k8v-KZ-bOZ"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kEU-hE-Rfi"/>
+                            <constraint firstItem="wDj-rZ-yqX" firstAttribute="trailing" secondItem="eZr-Ee-hBk" secondAttribute="trailing" id="o4S-XW-H3W"/>
+                            <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="szV-Tc-i8K"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="15" id="vl2-km-wav"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
