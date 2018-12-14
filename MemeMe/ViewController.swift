@@ -12,13 +12,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    
-    
     
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -38,6 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.textAlignment = .center
         self.topTextField.delegate = self
         self.bottomTextField.delegate = self
+        shareButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +90,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
+        
+        shareButton.isEnabled = true
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
@@ -97,9 +99,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+        shareButton.isEnabled = true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
         }

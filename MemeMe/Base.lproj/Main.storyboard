@@ -101,6 +101,7 @@
                         <outlet property="bottomTextField" destination="wDj-rZ-yqX" id="uC0-Rl-LLj"/>
                         <outlet property="cameraButton" destination="QNW-UP-eJr" id="VDM-gx-B5h"/>
                         <outlet property="imagePickerView" destination="3qc-T9-2cf" id="eSi-dP-Awr"/>
+                        <outlet property="shareButton" destination="dCZ-8m-5Ao" id="SQU-iz-NCC"/>
                         <outlet property="topBar" destination="Jz0-zc-MKK" id="VGU-Nt-dGt"/>
                         <outlet property="topTextField" destination="eZr-Ee-hBk" id="a66-MW-mIi"/>
                     </connections>
