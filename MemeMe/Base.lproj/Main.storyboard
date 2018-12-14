@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-zc-MKK" userLabel="Top Toolbar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BB2-ws-Tng"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                                             <action selector="share:" destination="BYZ-38-t0r" id="sfB-1P-a99"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="299" systemItem="fixedSpace" id="EYa-KQ-X2d"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="EYa-KQ-X2d"/>
                                     <barButtonItem systemItem="cancel" id="1SU-mH-yz5">
                                         <connections>
                                             <action selector="cancel:" destination="BYZ-38-t0r" id="54v-vl-2kk"/>
@@ -38,7 +38,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6" userLabel="Bottom Toolbar">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="270" width="568" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xtu-3L-dnm"/>
                                 </constraints>
@@ -58,16 +58,17 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
-                                <rect key="frame" x="0.0" y="94" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="50" width="568" height="220"/>
+                                <color key="backgroundColor" red="0.11648448447463987" green="0.13961357031971969" blue="0.23571081606217614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
-                                <rect key="frame" x="5" y="144" width="414" height="17"/>
+                                <rect key="frame" x="5" y="80" width="568" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-rZ-yqX" userLabel="Bottom Text Field">
-                                <rect key="frame" x="5" y="745" width="414" height="17"/>
+                                <rect key="frame" x="5" y="223" width="568" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -77,11 +78,17 @@
                         <constraints>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="trailing" secondItem="epy-Oo-JM6" secondAttribute="trailing" id="0v6-rU-H9n"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" id="6Jk-La-OcY"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7fU-lR-QDd"/>
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DBT-91-kDU"/>
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Ghq-La-UGX"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MCB-2r-eJR"/>
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" placeholder="YES" id="Pxn-bB-86w"/>
                             <constraint firstItem="eZr-Ee-hBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Qns-sP-xkd"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="50" id="S5F-ws-8QA"/>
+                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="30" id="S5F-ws-8QA"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SSu-UW-KRJ"/>
+                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UKF-EA-Jhg"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WaQ-0i-WoO"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a1r-yO-kCs"/>
                             <constraint firstItem="eZr-Ee-hBk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="aSB-J3-Lhx"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="bottom" secondItem="epy-Oo-JM6" secondAttribute="top" id="cT0-Fc-W1B"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfz-Tr-F1I"/>
@@ -92,7 +99,7 @@
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mmu-Mj-9HW"/>
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="3qc-T9-2cf" secondAttribute="leading" id="rbx-O8-huW"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tjm-Rp-nhP"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="50" id="xi8-xa-Df4"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="30" id="xi8-xa-Df4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

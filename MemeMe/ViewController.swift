@@ -129,7 +129,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-//        Create the meme
+        // Create the meme
         _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
     }
     
@@ -138,18 +138,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topBar.isHidden = true
         bottomBar.isHidden = true
         
-        
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        
         // Show toolbar and navbar
         topBar.isHidden = false
         bottomBar.isHidden = false
-        
         
         return memedImage
     }
