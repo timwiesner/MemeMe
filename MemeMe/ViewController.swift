@@ -98,12 +98,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = type
         present(imagePicker, animated: true, completion: nil)
-        shareButton.isEnabled = true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
+            shareButton.isEnabled = (imagePickerView != nil)
         }
         
         dismiss(animated: true, completion: nil)
