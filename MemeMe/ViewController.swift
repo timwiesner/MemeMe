@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    // MARK: Outlet Buttons
     @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -20,35 +21,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomTextField: UITextField!
     
     var textFieldDelegate = TextFieldDelegate()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
-        shareButton.isEnabled = false
-    }
-    
-    func initText(_ textField: UITextField) {
-        textField.delegate = textFieldDelegate
-        
-        let memeTextAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key.strokeWidth:  -3.5
-        ]
-        
-//        topTextField.defaultTextAttributes = memeTextAttributes
-//        bottomTextField.defaultTextAttributes = memeTextAttributes
-        textField.defaultTextAttributes = memeTextAttributes
-        textField.textAlignment = .center
-//        topTextField.text = "TOP"
-//        bottomTextField.text = "BOTTOM"
-//        topTextField.textAlignment = .center
-//        bottomTextField.textAlignment = .center
-//        self.topTextField.delegate = self
-//        self.bottomTextField.delegate = self
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -61,15 +33,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         unsubscribeFromKeyboardNotifications()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        shareButton.isEnabled = false
+        initText(topTextField)
+        initText(bottomTextField)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text = ""
+    // MARK: Init Text
+    func initText(_ textField: UITextField) {
+        textField.delegate = textFieldDelegate
+        
+        let memeTextAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.strokeColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSAttributedString.Key.strokeWidth:  -3.5
+        ]
+        
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
     }
     
+    // MARK: Kayboard Functions
     @objc func keyboardWillShow(_ notification:Notification) {
         if bottomTextField.isFirstResponder {
             view.frame.origin.y -= getKeyboardHeight(notification)
@@ -95,6 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
+    // MARK: Image Picker
     @IBAction func pickImageFromAlbum(_ sender: Any) {
         configureImage(type: .photoLibrary)
     }
@@ -119,6 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Cancel
     @IBAction func cancel(_ sender: Any) {
         imagePickerView.image = nil
         topTextField.text = "TOP"
@@ -126,6 +114,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         shareButton.isEnabled = false
     }
     
+    // MARK: Share
     @IBAction func share(_ sender: Any) {
         save()
         let memedImage = generateMemedImage()
@@ -138,11 +127,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(vc, animated: true)
     }
     
+    // MARK: Save
     func save() {
         // Create the meme
         _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
     }
     
+    // MARK: Generate Meme
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
         topBar.isHidden = true
