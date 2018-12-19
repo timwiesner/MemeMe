@@ -62,13 +62,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
-                                <rect key="frame" x="20" y="129" width="374" height="48"/>
+                                <rect key="frame" x="20" y="114" width="374" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-rZ-yqX" userLabel="Bottom Text Field">
-                                <rect key="frame" x="20" y="729" width="374" height="48"/>
+                                <rect key="frame" x="20" y="744" width="374" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -80,7 +80,7 @@
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bpf-2C-Enn"/>
                             <constraint firstItem="eZr-Ee-hBk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eje-ce-Pyr"/>
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3k-Pk-fvp"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="35" id="Mrx-jY-E3O"/>
+                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="20" id="Mrx-jY-E3O"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OuM-P1-6s9"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" id="TKj-yG-prR"/>
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TvT-O0-soJ"/>
@@ -91,7 +91,7 @@
                             <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kEU-hE-Rfi"/>
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="trailing" secondItem="eZr-Ee-hBk" secondAttribute="trailing" id="o4S-XW-H3W"/>
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="szV-Tc-i8K"/>
-                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="35" id="vl2-km-wav"/>
+                            <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="20" id="vl2-km-wav"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
