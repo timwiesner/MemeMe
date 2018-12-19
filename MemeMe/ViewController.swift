@@ -115,15 +115,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Share
     @IBAction func share(_ sender: Any) {
-        save()
         let memedImage = generateMemedImage()
-        let vc = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        vc.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+        let viewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        // Set this to keep from crashing on iPad
+        viewController.popoverPresentationController?.sourceView = self.view
+        viewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            // If cancelled by user
             if !completed {
                 return
             }
+            self.save()
         }
-        present(vc, animated: true)
+        present(viewController, animated: true)
+    
     }
     
     // MARK: Save
