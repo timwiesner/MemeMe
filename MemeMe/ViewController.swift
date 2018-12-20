@@ -159,14 +159,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomBar.isHidden = isHidden
     }
     
-    
-    struct Meme{
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memedImage: UIImage
-    }
-    
 }
 
 
