@@ -140,8 +140,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Generate Meme
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
-        topBar.isHidden = true
-        bottomBar.isHidden = true
+        configureToolbar(true)
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -150,10 +149,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
-        topBar.isHidden = false
-        bottomBar.isHidden = false
+        configureToolbar(false)
         
         return memedImage
+    }
+    
+    func configureToolbar(_ isHidden: Bool) {
+        topBar.isHidden = isHidden
+        bottomBar.isHidden = isHidden
     }
     
     
