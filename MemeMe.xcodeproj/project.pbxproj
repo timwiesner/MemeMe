@@ -64,14 +64,14 @@
 			children = (
 				6B1AB09A21C051360026C0D5 /* AppDelegate.swift */,
 				6B1AB09C21C051360026C0D5 /* ViewController.swift */,
+				6BECD13721DEBFDB00C2F8B5 /* MemeTableViewController.swift */,
+				6BECD13921DEBFF000C2F8B5 /* MemeCollectionViewController.swift */,
 				6B7DDDF121CC368A003B7A62 /* MemeModel.swift */,
 				6B1AB09E21C051360026C0D5 /* Main.storyboard */,
 				6B1AB0A121C051360026C0D5 /* Assets.xcassets */,
 				6B1AB0A321C051360026C0D5 /* LaunchScreen.storyboard */,
 				6B1AB0A621C051360026C0D5 /* Info.plist */,
 				6B2ADCED21C4AE1300F74803 /* TextFieldDelegate.swift */,
-				6BECD13721DEBFDB00C2F8B5 /* MemeTableViewController.swift */,
-				6BECD13921DEBFF000C2F8B5 /* MemeCollectionViewController.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
