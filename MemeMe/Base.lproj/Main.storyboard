@@ -73,6 +73,9 @@
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="memeImageView" destination="Hfz-M8-eQJ" id="q4K-Vf-IR0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -160,7 +163,7 @@
             </objects>
             <point key="canvasLocation" x="-1297" y="179"/>
         </scene>
-        <!--Meme View Controller-->
+        <!--Create Meme-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -245,7 +248,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CUD-2H-ZAv"/>
+                    <navigationItem key="navigationItem" title="Create Meme" id="T0M-Yo-MOe"/>
                     <connections>
                         <outlet property="bottomBar" destination="epy-Oo-JM6" id="Z1C-1m-c03"/>
                         <outlet property="bottomTextField" destination="wDj-rZ-yqX" id="uC0-Rl-LLj"/>
@@ -266,6 +269,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1zP-Et-mVr"/>
+        <segue reference="rpc-mU-K6M"/>
     </inferredMetricsTieBreakers>
 </document>

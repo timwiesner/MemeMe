@@ -37,6 +37,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
         initText(topTextField)
         initText(bottomTextField)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
     
     // MARK: Init Text
