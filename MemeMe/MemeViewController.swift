@@ -35,7 +35,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.isEnabled = false
-        initText(topTextField)
+//        initText(topTextField)
         initText(bottomTextField)
     }
     
@@ -120,12 +120,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
     }
     
-//    @IBAction func canc(_ sender: Any) {
-//        imagePickerView.image = nil
-//        topTextField.text = "TOP"
-//        bottomTextField.text = "BOTTOM"
-//        shareButton.isEnabled = false
-//    }
     
     // MARK: Share
     @IBAction func share(_ sender: Any) {
@@ -172,7 +166,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func configureToolbar(_ isHidden: Bool) {
-        topBar.isHidden = isHidden
         bottomBar.isHidden = isHidden
     }
     

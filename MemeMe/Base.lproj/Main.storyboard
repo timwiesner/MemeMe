@@ -156,13 +156,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-T9-2cf">
-                                <rect key="frame" x="0.0" y="138" width="414" height="674"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-zc-MKK" userLabel="Top Toolbar">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6" userLabel="Bottom Toolbar">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BB2-ws-Tng"/>
+                                    <constraint firstAttribute="height" constant="50" id="xtu-3L-dnm"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="action" id="dCZ-8m-5Ao">
@@ -170,15 +170,6 @@
                                             <action selector="share:" destination="BYZ-38-t0r" id="sfB-1P-a99"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="EYa-KQ-X2d"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6" userLabel="Bottom Toolbar">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xtu-3L-dnm"/>
-                                </constraints>
-                                <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1eC-SX-xXC"/>
                                     <barButtonItem title="Album" id="XdB-eQ-8aX">
                                         <connections>
@@ -194,7 +185,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
-                                <rect key="frame" x="20" y="158" width="374" height="48"/>
+                                <rect key="frame" x="20" y="108" width="374" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -211,16 +202,13 @@
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="eZr-Ee-hBk" secondAttribute="leading" id="7O8-uQ-xX2"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bpf-2C-Enn"/>
                             <constraint firstItem="eZr-Ee-hBk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eje-ce-Pyr"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3k-Pk-fvp"/>
-                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" constant="20" id="Mrx-jY-E3O"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OuM-P1-6s9"/>
-                            <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="Jz0-zc-MKK" secondAttribute="bottom" id="TKj-yG-prR"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TvT-O0-soJ"/>
+                            <constraint firstItem="3qc-T9-2cf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UsD-zS-9Qh"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YIH-Ow-ZdW"/>
+                            <constraint firstItem="eZr-Ee-hBk" firstAttribute="top" secondItem="3qc-T9-2cf" secondAttribute="top" constant="20" id="cjV-dZ-j3k"/>
                             <constraint firstItem="3qc-T9-2cf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eTM-aL-Mal"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k6b-Ua-HIj"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="3qc-T9-2cf" secondAttribute="bottom" id="k8v-KZ-bOZ"/>
-                            <constraint firstItem="Jz0-zc-MKK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kEU-hE-Rfi"/>
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="trailing" secondItem="eZr-Ee-hBk" secondAttribute="trailing" id="o4S-XW-H3W"/>
                             <constraint firstItem="wDj-rZ-yqX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="szV-Tc-i8K"/>
                             <constraint firstItem="epy-Oo-JM6" firstAttribute="top" secondItem="wDj-rZ-yqX" secondAttribute="bottom" constant="20" id="vl2-km-wav"/>
@@ -245,7 +233,6 @@
                         <outlet property="cameraButton" destination="QNW-UP-eJr" id="VDM-gx-B5h"/>
                         <outlet property="imagePickerView" destination="3qc-T9-2cf" id="eSi-dP-Awr"/>
                         <outlet property="shareButton" destination="dCZ-8m-5Ao" id="SQU-iz-NCC"/>
-                        <outlet property="topBar" destination="Jz0-zc-MKK" id="VGU-Nt-dGt"/>
                         <outlet property="topTextField" destination="eZr-Ee-hBk" id="a66-MW-mIi"/>
                     </connections>
                 </viewController>
