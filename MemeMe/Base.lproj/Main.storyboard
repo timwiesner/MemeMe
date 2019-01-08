@@ -171,11 +171,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="EYa-KQ-X2d"/>
-                                    <barButtonItem systemItem="cancel" id="1SU-mH-yz5">
-                                        <connections>
-                                            <action selector="cancel:" destination="BYZ-38-t0r" id="54v-vl-2kk"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oo-JM6" userLabel="Bottom Toolbar">
@@ -238,7 +233,11 @@
                                 <action selector="back:" destination="BYZ-38-t0r" id="IkE-cj-bK3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="8cB-Ry-ehf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="8cB-Ry-ehf">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="Ur9-4b-Re0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomBar" destination="epy-Oo-JM6" id="Z1C-1m-c03"/>
