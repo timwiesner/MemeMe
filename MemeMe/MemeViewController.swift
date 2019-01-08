@@ -37,7 +37,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
         initText(topTextField)
         initText(bottomTextField)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+//        self.navigationItem.backBarButtonItem
     }
     
     // MARK: Init Text
@@ -106,6 +106,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         dismiss(animated: true, completion: nil)
     }
+    
+    //    MARK: Go back
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     // MARK: Cancel
     @IBAction func cancel(_ sender: Any) {

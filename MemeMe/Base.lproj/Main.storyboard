@@ -86,7 +86,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="uFm-GT-Npi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZPZ-Nk-oWJ">
                             <connections>
-                                <segue destination="B9c-Rd-Bnz" kind="presentation" id="rpc-mU-K6M"/>
+                                <segue destination="L6L-NJ-OmE" kind="presentation" id="6Wb-7P-KTd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -94,22 +94,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOP-AK-2jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1297.1014492753625" y="-619.41964285714278"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YAT-OD-eq7">
-            <objects>
-                <navigationController id="B9c-Rd-Bnz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lpe-2S-RW0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V92-pP-spt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VeJ-De-f3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-426" y="-220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u1k-fd-aya">
@@ -154,7 +138,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="hzq-bM-7JU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="132-kq-aGJ">
                             <connections>
-                                <segue destination="B9c-Rd-Bnz" kind="presentation" id="1zP-Et-mVr"/>
+                                <segue destination="L6L-NJ-OmE" kind="presentation" id="ZND-Ib-YXh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -248,7 +232,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Meme" id="T0M-Yo-MOe"/>
+                    <navigationItem key="navigationItem" title="Create Meme" id="sFH-EX-nFU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="A3z-3T-3V1">
+                            <connections>
+                                <action selector="back:" destination="BYZ-38-t0r" id="IkE-cj-bK3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="8cB-Ry-ehf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomBar" destination="epy-Oo-JM6" id="Z1C-1m-c03"/>
                         <outlet property="bottomTextField" destination="wDj-rZ-yqX" id="uC0-Rl-LLj"/>
@@ -261,7 +252,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-220"/>
+            <point key="canvasLocation" x="518.84057971014499" y="-220.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ElI-PT-v6R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L6L-NJ-OmE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYi-79-s52">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w4V-Jk-2mQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCV-Do-dgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391.304347826087" y="-220.3125"/>
         </scene>
     </scenes>
     <resources>
@@ -269,6 +278,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rpc-mU-K6M"/>
+        <segue reference="6Wb-7P-KTd"/>
     </inferredMetricsTieBreakers>
 </document>
