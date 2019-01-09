@@ -11,7 +11,7 @@ import UIKit
 class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     // MARK: Outlet Buttons
-    @IBOutlet weak var topBar: UIToolbar!
+//    @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -172,7 +172,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func configureToolbar(_ isHidden: Bool) {
-        topBar.isHidden = isHidden
+//        topBar.isHidden = isHidden
         bottomBar.isHidden = isHidden
     }
     
