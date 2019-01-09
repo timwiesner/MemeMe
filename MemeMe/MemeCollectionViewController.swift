@@ -10,13 +10,18 @@ import Foundation
 import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView!.reloadData()
+    }
+    
     var memes: [Meme]! {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.memes
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(memes.count)
+//        print(memes.count)
         return memes.count
     }
     
@@ -30,8 +35,9 @@ class MemeCollectionViewController: UICollectionViewController {
         return cell
     }
     
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let meme = memes[(indexPath as NSIndexPath).row]
+        performSegue(withIdentifier: "memeDetail", sender: meme)
+    }
     
 }

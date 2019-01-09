@@ -90,6 +90,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="QaE-cL-0ON" kind="show" identifier="memeDetail" id="cWl-2k-DLW"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOP-AK-2jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentMemeCell" id="beK-RE-N1P">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="beK-RE-N1P">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beK-RE-N1P" id="aeK-Pi-9h4">
@@ -158,6 +161,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="QaE-cL-0ON" kind="show" identifier="memeDetail" id="iAf-P4-yhj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXp-cv-CED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,12 +275,42 @@
             </objects>
             <point key="canvasLocation" x="428" y="-220"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="TH1-uM-iRz">
+            <objects>
+                <viewController id="QaE-cL-0ON" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ELd-Hh-bUx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-57-yrR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fNe-57-yrR" firstAttribute="bottom" secondItem="nlL-wK-irq" secondAttribute="bottom" id="2H0-Rj-mSK"/>
+                            <constraint firstItem="fNe-57-yrR" firstAttribute="top" secondItem="nlL-wK-irq" secondAttribute="top" id="fgS-fo-7M3"/>
+                            <constraint firstItem="fNe-57-yrR" firstAttribute="leading" secondItem="ELd-Hh-bUx" secondAttribute="leading" id="fuG-Qf-4b7"/>
+                            <constraint firstAttribute="trailing" secondItem="fNe-57-yrR" secondAttribute="trailing" id="zlr-y2-Rdz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nlL-wK-irq"/>
+                    </view>
+                    <connections>
+                        <outlet property="memedImageView" destination="fNe-57-yrR" id="V9L-sn-m9Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcT-AG-lQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.0434782608697" y="-220.3125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="collection_30x30" width="30" height="30"/>
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="iAf-P4-yhj"/>
         <segue reference="1zP-Et-mVr"/>
     </inferredMetricsTieBreakers>
 </document>
