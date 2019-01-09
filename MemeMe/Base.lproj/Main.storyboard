@@ -278,13 +278,13 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="TH1-uM-iRz">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailViewController" id="QaE-cL-0ON" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" hidesBottomBarWhenPushed="YES" id="QaE-cL-0ON" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ELd-Hh-bUx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-57-yrR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -302,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcT-AG-lQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213.0434782608697" y="-220.3125"/>
+            <point key="canvasLocation" x="1387" y="-220"/>
         </scene>
     </scenes>
     <resources>
@@ -310,7 +310,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iAf-P4-yhj"/>
-        <segue reference="1zP-Et-mVr"/>
+        <segue reference="cWl-2k-DLW"/>
+        <segue reference="rpc-mU-K6M"/>
     </inferredMetricsTieBreakers>
 </document>
