@@ -11,13 +11,34 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+  
+    var memes: [Meme]! {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.memes
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         collectionView!.reloadData()
     }
     
-    var memes: [Meme]! {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let space: CGFloat
+        let dimension: CGFloat
+        
+        if UIDevice.current.orientation.isPortrait {
+            space = 3.0
+            dimension = (view.frame.size.width - (2 * space)) / 3.0
+        } else {
+            space = 1.0
+            dimension = (view.frame.size.width - (1 * space)) / 5.0
+        }
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,11 +47,8 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
-        
         let meme = memes[(indexPath as NSIndexPath).row]
-        
         cell.memeImageView.image = meme.memedImage
-        
         return cell
     }
     
