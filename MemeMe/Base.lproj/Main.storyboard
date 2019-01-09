@@ -187,11 +187,6 @@
                                     <constraint firstAttribute="height" constant="50" id="BB2-ws-Tng"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="action" id="dCZ-8m-5Ao">
-                                        <connections>
-                                            <action selector="share:" destination="BYZ-38-t0r" id="sfB-1P-a99"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="EYa-KQ-X2d"/>
                                     <barButtonItem systemItem="cancel" id="1SU-mH-yz5">
                                         <connections>
@@ -206,18 +201,24 @@
                                     <constraint firstAttribute="height" constant="50" id="xtu-3L-dnm"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem systemItem="action" id="dCZ-8m-5Ao">
+                                        <connections>
+                                            <action selector="share:" destination="BYZ-38-t0r" id="sfB-1P-a99"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1eC-SX-xXC"/>
-                                    <barButtonItem title="Album" id="XdB-eQ-8aX">
+                                    <barButtonItem title="Album" image="photo-gallery" id="XdB-eQ-8aX">
+                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
                                         <connections>
                                             <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="j2d-HW-hcL"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ffG-mR-z4i"/>
                                     <barButtonItem systemItem="camera" id="QNW-UP-eJr">
                                         <connections>
                                             <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="8e7-Lq-scH"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ffG-mR-z4i"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-Ee-hBk" userLabel="Top Text Field">
@@ -258,6 +259,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="bNz-1N-OaI">
                             <connections>
                                 <action selector="goBack:" destination="BYZ-38-t0r" id="cjf-aV-ZJY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="1Ti-Wg-wCZ">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="Z8V-O9-35Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -307,6 +313,7 @@
     </scenes>
     <resources>
         <image name="collection_30x30" width="30" height="30"/>
+        <image name="photo-gallery" width="180" height="180"/>
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

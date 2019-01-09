@@ -37,7 +37,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
         initText(topTextField)
         initText(bottomTextField)
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
     
     // MARK: Init Text
@@ -112,14 +111,21 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         dismiss(animated: true, completion: nil)
     }
     
-    
-    // MARK: Cancel
-    @IBAction func cancel(_ sender: Any) {
+    //    MARK: Refresh
+    @IBAction func refresh(_ sender: Any) {
         imagePickerView.image = nil
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
         shareButton.isEnabled = false
     }
+    
+    // MARK: Cancel
+//    @IBAction func cancel(_ sender: Any) {
+//        imagePickerView.image = nil
+//        topTextField.text = "TOP"
+//        bottomTextField.text = "BOTTOM"
+//        shareButton.isEnabled = false
+//    }
     
     // MARK: Share
     @IBAction func share(_ sender: Any) {
