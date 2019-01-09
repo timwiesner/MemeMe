@@ -21,7 +21,6 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print(memes.count)
         return memes.count
     }
     
@@ -30,14 +29,15 @@ class MemeCollectionViewController: UICollectionViewController {
         
         let meme = memes[(indexPath as NSIndexPath).row]
         
-        cell.memeImageView?.image = meme.memedImage
+        cell.memeImageView.image = meme.memedImage
         
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let meme = memes[(indexPath as NSIndexPath).row]
-        performSegue(withIdentifier: "memeDetail", sender: meme)
+        let memeDetailController = storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        memeDetailController.meme = memes[(indexPath as NSIndexPath).row]
+        navigationController!.pushViewController(memeDetailController, animated: true)
     }
     
 }

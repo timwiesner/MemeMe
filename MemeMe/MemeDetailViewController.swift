@@ -11,12 +11,17 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
+    @IBOutlet weak var memedImageView: UIImageView!
+    
     var meme: Meme?
     
-    @IBOutlet var memedImageView: UIImageView!
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        memedImageView.image = meme?.memedImage
+//    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         memedImageView.image = meme?.memedImage
     }
 }
