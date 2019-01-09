@@ -1,5 +1,5 @@
 //
-//  SentMemesCollectionViewController.swift
+//  MemeCollectionViewController.swift
 //  MemeMe
 //
 //  Created by Tim Wiesner on 1/3/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SentMemesCollectionViewController: UICollectionViewController {
+class MemeCollectionViewController: UICollectionViewController {
     var memes: [Meme]! {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.memes
@@ -21,7 +21,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SentMemesCollectionViewCell", for: indexPath) as! SentMemesCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
         
         let meme = memes[(indexPath as NSIndexPath).row]
         
