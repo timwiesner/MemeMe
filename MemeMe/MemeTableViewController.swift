@@ -11,6 +11,8 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
     
+    @IBOutlet weak var memeTableView: UITableView!
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView!.reloadData()
     }
@@ -25,7 +27,7 @@ class MemeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for: indexPath) as! MemeTableViewCell
         let meme = memes[(indexPath as NSIndexPath).row]
         cell.imageView?.image = meme.memedImage
         return cell
