@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-3172" y="-220"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Collection View Navigation Controller-->
         <scene sceneID="HoI-wr-lUY">
             <objects>
-                <navigationController id="W4Z-k1-tfx" userLabel="Navigation Controller" sceneMemberID="viewController">
+                <navigationController id="W4Z-k1-tfx" userLabel="Collection View Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collection" image="collection_30x30" id="Dyl-gf-fuK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qhr-Dv-GDw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="-1297.1014492753625" y="-619.41964285714278"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Create Meme Navigation Controller-->
         <scene sceneID="YAT-OD-eq7">
             <objects>
-                <navigationController id="B9c-Rd-Bnz" sceneMemberID="viewController">
+                <navigationController id="B9c-Rd-Bnz" userLabel="Create Meme Navigation Controller" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lpe-2S-RW0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-426" y="-220"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Table View Navigation Controller-->
         <scene sceneID="u1k-fd-aya">
             <objects>
-                <navigationController id="OEB-zm-QwW" userLabel="Navigation Controller" sceneMemberID="viewController">
+                <navigationController id="OEB-zm-QwW" userLabel="Table View Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" image="table_30x30" id="0ws-P2-l5U"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NGX-tM-MZv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
