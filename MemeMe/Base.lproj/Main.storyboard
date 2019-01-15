@@ -286,7 +286,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Meme" id="T0M-Yo-MOe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="bNz-1N-OaI">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bNz-1N-OaI">
                             <connections>
                                 <action selector="goBack:" destination="BYZ-38-t0r" id="cjf-aV-ZJY"/>
                             </connections>
