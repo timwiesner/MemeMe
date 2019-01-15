@@ -118,6 +118,14 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
     }
     
+    // MARK: Cancel
+//    @IBAction func cancel(_ sender: Any) {
+//        imagePickerView.image = nil
+//        topTextField.text = "TOP"
+//        bottomTextField.text = "BOTTOM"
+//        shareButton.isEnabled = false
+//    }
+    
     // MARK: Share
     @IBAction func share(_ sender: Any) {
         let memedImage = generateMemedImage()
@@ -149,26 +157,21 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
         configureToolbar(true)
-
-        // Render view to an image
-//        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: view.frame.size.width, height: view.frame.size.width), false, 0)
-//        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         
-        self.view.drawHierarchy(in: CGRect(x: 0, y: -218.7, width: view.frame.size.width, height: view.frame.size.height), afterScreenUpdates: true)
-//    self.view.drawViewHierarchyInRect(CGRectMake(-50,-50,view.bounds.size.width,view.bounds.size.height) afterScreenUpdates: true)
-
-
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-
+        
         // Show toolbar and navbar
         configureToolbar(false)
-
+        
         return memedImage
     }
     
     func configureToolbar(_ isHidden: Bool) {
+//        topBar.isHidden = isHidden
         bottomBar.isHidden = isHidden
     }
     
