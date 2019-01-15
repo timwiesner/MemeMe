@@ -135,7 +135,7 @@
         <scene sceneID="sF8-eb-2Le">
             <objects>
                 <tableViewController id="fpO-FZ-6sZ" userLabel="Saved Memes Table" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSl-RR-0tH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSl-RR-0tH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,14 +175,12 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="35l-Sm-ow7" secondAttribute="bottom" constant="4.6666666666666572" id="2bR-8X-vEq"/>
                                         <constraint firstItem="QUL-8w-VZh" firstAttribute="top" secondItem="aeK-Pi-9h4" secondAttribute="top" constant="30" id="3up-QX-WDN"/>
                                         <constraint firstItem="35l-Sm-ow7" firstAttribute="leading" secondItem="aeK-Pi-9h4" secondAttribute="leading" constant="5" id="62D-ac-jNK"/>
                                         <constraint firstItem="35l-Sm-ow7" firstAttribute="top" secondItem="aeK-Pi-9h4" secondAttribute="top" constant="5" id="9aV-K1-qHc"/>
                                         <constraint firstItem="QUL-8w-VZh" firstAttribute="leading" secondItem="35l-Sm-ow7" secondAttribute="trailing" constant="8" id="NoV-LS-ekU"/>
                                         <constraint firstAttribute="bottom" secondItem="Azb-bp-RZ4" secondAttribute="bottom" constant="30" id="ea0-dH-lFO"/>
                                         <constraint firstItem="Azb-bp-RZ4" firstAttribute="leading" secondItem="35l-Sm-ow7" secondAttribute="trailing" constant="8" id="mTs-U9-PN5"/>
-                                        <constraint firstItem="35l-Sm-ow7" firstAttribute="top" secondItem="aeK-Pi-9h4" secondAttribute="topMargin" constant="-6" id="xXT-Gm-wyz"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
