@@ -49,6 +49,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B09C65B21EE7981000221AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B1AB09C21C051360026C0D5 /* MemeViewController.swift */,
+				6B257F9D21E64F5800F3CBD0 /* MemeDetailViewController.swift */,
+				6BECD13721DEBFDB00C2F8B5 /* MemeTableViewController.swift */,
+				6BECD13921DEBFF000C2F8B5 /* MemeCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6B09C65C21EE79D6000221AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B7DDDF121CC368A003B7A62 /* MemeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B09C65D21EE79F0000221AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B26836921E6A526002CA7D2 /* MemeTableViewCell.swift */,
+				6B46036121E3F8C700B1D8FA /* MemeCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B09C65E21EE7A72000221AC /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6B1AB09A21C051360026C0D5 /* AppDelegate.swift */,
+				6B2ADCED21C4AE1300F74803 /* TextFieldDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		6B1AB08E21C051360026C0D5 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +105,14 @@
 		6B1AB09921C051360026C0D5 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
-				6B1AB09A21C051360026C0D5 /* AppDelegate.swift */,
-				6B1AB09C21C051360026C0D5 /* MemeViewController.swift */,
-				6B257F9D21E64F5800F3CBD0 /* MemeDetailViewController.swift */,
-				6BECD13721DEBFDB00C2F8B5 /* MemeTableViewController.swift */,
-				6B26836921E6A526002CA7D2 /* MemeTableViewCell.swift */,
-				6BECD13921DEBFF000C2F8B5 /* MemeCollectionViewController.swift */,
-				6B46036121E3F8C700B1D8FA /* MemeCollectionViewCell.swift */,
-				6B7DDDF121CC368A003B7A62 /* MemeModel.swift */,
+				6B09C65E21EE7A72000221AC /* Delegate */,
+				6B09C65D21EE79F0000221AC /* Cell */,
+				6B09C65C21EE79D6000221AC /* Model */,
+				6B09C65B21EE7981000221AC /* Controller */,
 				6B1AB09E21C051360026C0D5 /* Main.storyboard */,
 				6B1AB0A121C051360026C0D5 /* Assets.xcassets */,
 				6B1AB0A321C051360026C0D5 /* LaunchScreen.storyboard */,
 				6B1AB0A621C051360026C0D5 /* Info.plist */,
-				6B2ADCED21C4AE1300F74803 /* TextFieldDelegate.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
