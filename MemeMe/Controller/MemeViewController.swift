@@ -118,14 +118,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
     }
     
-    // MARK: Cancel
-//    @IBAction func cancel(_ sender: Any) {
-//        imagePickerView.image = nil
-//        topTextField.text = "TOP"
-//        bottomTextField.text = "BOTTOM"
-//        shareButton.isEnabled = false
-//    }
-    
     // MARK: Share
     @IBAction func share(_ sender: Any) {
         let memedImage = generateMemedImage()
@@ -171,7 +163,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func configureToolbar(_ isHidden: Bool) {
-//        topBar.isHidden = isHidden
         bottomBar.isHidden = isHidden
     }
     
