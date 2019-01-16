@@ -8,7 +8,9 @@
 
 import UIKit
 
+// MARK: MemeCollectionViewCell: UICollectionViewCell
 class MemeCollectionViewCell: UICollectionViewCell {
     
+    //    MARK: Outlets
     @IBOutlet var memeImageView: UIImageView!
 }

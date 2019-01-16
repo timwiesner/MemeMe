@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+// MARK: MemeCollectionViewController: UICollectionViewController
 class MemeCollectionViewController: UICollectionViewController {
     
+    //    MARK: Outlets
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
   
     var memes: [Meme]! {
@@ -18,6 +20,7 @@ class MemeCollectionViewController: UICollectionViewController {
         return appDelegate.memes
     }
     
+    //    MARK: Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         collectionView!.reloadData()
     }
@@ -41,6 +44,7 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
     }
     
+    //    MARK: Collection View Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count
     }

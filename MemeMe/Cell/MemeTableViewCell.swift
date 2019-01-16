@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: MemeTableViewCell: UITableViewCell
 class MemeTableViewCell: UITableViewCell {
     
     //    MARK: Outlets
