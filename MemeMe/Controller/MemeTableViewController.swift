@@ -9,19 +9,23 @@
 import Foundation
 import UIKit
 
+// MARK: MemeTableViewController: UITableViewController
 class MemeTableViewController: UITableViewController {
     
+    //    MARK: Outlets
     @IBOutlet weak var memeTableView: UITableView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView!.reloadData()
-    }
     
     var memes: [Meme]! {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.memes
     }
     
+    //    MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        tableView!.reloadData()
+    }
+    
+    //    MARK: Table View Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
